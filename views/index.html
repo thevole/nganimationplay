@@ -11,9 +11,19 @@
     <h1>Playing with Animations in AngularJS</h1>
     <hr>
     <div ng-controller="mainCtrl">
-        <button class="small button radius" ng-click="toggle()">Toggle On/Off</button>
-        <div class="my-special-animation" ng-if="on">
-            This content will enter and leave
+        <div class="row">
+            <div class="small-6 columns">
+                <button class="small button radius" ng-click="toggle()">Toggle On/Off</button>
+                <b>&nbsp;ng-if</b>
+                <div class="my-special-animation" ng-if="on">
+                    This content will enter and leave
+                </div>
+            </div>
+            <div class="small-6 columns">
+                <button class="small button radius" ng-click="toggleDanger()">Toggle Danger</button>
+                <b>&nbsp;ng-class</b>
+                <div class="panel radius" ng-class="{danger: danger}">This is your last warning</div>
+            </div>
         </div>
     </div>
 </div>

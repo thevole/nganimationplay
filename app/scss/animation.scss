@@ -24,4 +24,24 @@
   }
 }
 
+.danger {
+
+  background: red;
+
+}
+
+.danger.danger-add, .danger-remove {
+  -webkit-transition: 2s linear all;
+  transition: 2s linear all;
+
+  &.danger-add-active {
+
+    background: deeppink;
+  }
+
+  &.danger-remove-active {
+    background: orange;
+  }
+}
+
 

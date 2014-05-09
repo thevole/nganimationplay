@@ -6,5 +6,11 @@ angular.module('app')
     $scope.toggle = function () {
       $scope.on = !$scope.on;
     };
+
+    $scope.danger = false;
+
+    $scope.toggleDanger = function () {
+      $scope.danger = !$scope.danger;
+    };
   }]);
 $(document).foundation();
