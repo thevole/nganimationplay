@@ -11,7 +11,7 @@
     <h1>Playing with Animations in AngularJS</h1>
     <hr>
     <div ng-controller="mainCtrl">
-        <button class="small button radius">Toggle On/Off</button>
+        <button class="small button radius" ng-click="toggle()">Toggle On/Off</button>
         <div class="my-special-animation" ng-if="on">
             This content will enter and leave
         </div>

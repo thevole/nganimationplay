@@ -1,0 +1,27 @@
+.my-special-animation.ng-enter {
+  -webkit-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+
+  background: red;
+  opacity: 0;
+
+  &.ng-enter-active {
+    background: blue;
+    opacity: 1;
+  }
+}
+
+.my-special-animation.ng-leave {
+  -webkit-transition: 2s linear all;
+  transition: 2s linear all;
+
+  background: green;
+  opacity: 1;
+
+  &.ng-leave-active {
+    background: #ffff00;
+    opacity: 0;
+  }
+}
+
+
