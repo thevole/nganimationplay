@@ -49,6 +49,9 @@
     -webkit-transition: 0.5s linear all;
     transition: 0.5s linear all;
     display: block !important;
+    position: absolute;
+    right: 15px;
+    left: 15px;
   }
 
   &.ng-hide.ng-hide-add {
