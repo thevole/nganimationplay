@@ -46,8 +46,8 @@
 
 .panel {
   &.ng-hide.ng-hide-add, &.ng-hide-remove {
-  -webkit-transition: 0.5s linear all;
-  transition: 0.5s linear all;
+    -webkit-transition: 0.5s linear all;
+    transition: 0.5s linear all;
     display: block !important;
   }
 
@@ -66,4 +66,52 @@
   }
 }
 
+.panel.special {
+  background: orange;
+  &.special-add {
+    -webkit-animation: 0.5s red-to-blue;
+    animation: 0.5s red-to-blue;
+  }
+}
+
+.panel.special-remove {
+  -webkit-animation: 0.5s blue-to-red;
+  animation: 0.5s blue-to-red;
+}
+
+@keyframes red-to-blue {
+  from {
+    background: red;
+  }
+  to {
+    background: blue;
+  }
+}
+
+@-webkit-keyframes red-to-blue {
+  from {
+    background: red;
+  }
+  to {
+    background: blue;
+  }
+}
+
+@keyframes blue-to-red {
+  from {
+    background: blue;
+  }
+  to {
+    background: red;
+  }
+}
+
+@-webkit-keyframes blue-to-red {
+  from {
+    background: blue;
+  }
+  to {
+    background: red;
+  }
+}
 

@@ -17,5 +17,11 @@ angular.module('app')
     $scope.toggleShow = function () {
       $scope.show = !$scope.show;
     };
+
+    $scope.special = false;
+    $scope.toggleSpecial = function () {
+      $scope.special = !$scope.special;
+    };
+
   }]);
 $(document).foundation();
