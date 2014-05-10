@@ -22,4 +22,13 @@ angular.module('app')
       $scope.special = !$scope.special;
     };
 
+    $scope.custom = false;
+    $scope.toggleCustom = function () {
+      $scope.custom = !$scope.custom;
+    };
+
+    $scope.items = [
+      1, 2, 3, 4, 5, 6, 7, 8, 9
+    ];
+
   }]);
