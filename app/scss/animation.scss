@@ -12,8 +12,8 @@
 }
 
 .my-special-animation.ng-leave {
-  -webkit-transition: 2s linear all;
-  transition: 2s linear all;
+  -webkit-transition: 0.5s linear all;
+  transition: 0.5s linear all;
 
   background: green;
   opacity: 1;
@@ -31,8 +31,8 @@
 }
 
 .danger.danger-add, .danger-remove {
-  -webkit-transition: 2s linear all;
-  transition: 2s linear all;
+  -webkit-transition: 0.5s linear all;
+  transition: 0.5s linear all;
 
   &.danger-add-active {
 
@@ -40,7 +40,29 @@
   }
 
   &.danger-remove-active {
-    background: orange;
+    background: darkgray;
+  }
+}
+
+.panel {
+  &.ng-hide.ng-hide-add, &.ng-hide-remove {
+  -webkit-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+    display: block !important;
+  }
+
+  &.ng-hide.ng-hide-add {
+    opacity: 1;
+    &.ng-hide-add-active {
+      opacity: 0;
+    }
+  }
+
+  &.ng-hide-remove {
+    opacity: 0;
+    &.ng-hide-remove-active {
+      opacity: 1;
+    }
   }
 }
 

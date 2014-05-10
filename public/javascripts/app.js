@@ -12,5 +12,10 @@ angular.module('app')
     $scope.toggleDanger = function () {
       $scope.danger = !$scope.danger;
     };
+
+    $scope.show = true;
+    $scope.toggleShow = function () {
+      $scope.show = !$scope.show;
+    };
   }]);
 $(document).foundation();
