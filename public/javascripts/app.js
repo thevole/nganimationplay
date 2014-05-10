@@ -143,7 +143,7 @@ angular.module('app')
           opacity: 1
         }, done);
       },
-      
+
       leave: function (element, done) {
         jQuery(element).css({
           position: 'absolute',
@@ -191,6 +191,8 @@ angular.module('app')
     $scope.items = [
       1, 2, 3, 4, 5, 6, 7, 8, 9
     ];
+
+    $scope.switch = 'one';
 
   }]);
 $(document).foundation();
