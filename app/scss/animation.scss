@@ -363,15 +363,19 @@
 
 .switch-transition.ng-enter {
   left: 100%;
+  opacity: 0;
   &.ng-enter-active {
     left: 0;
+    opacity: 1;
   }
 }
 
 .switch-transition.ng-leave {
   left: 0;
+  opacity: 1;
   &.ng-leave-active {
     left: -100%;
+    opacity: 0;
   }
 }
 

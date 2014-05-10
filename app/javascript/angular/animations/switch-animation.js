@@ -15,7 +15,7 @@ angular.module('app')
           opacity: 1
         }, done);
       },
-      
+
       leave: function (element, done) {
         jQuery(element).css({
           position: 'absolute',

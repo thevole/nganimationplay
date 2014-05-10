@@ -12,7 +12,7 @@
     <hr>
     <div ng-controller="mainCtrl">
         <div class="row">
-            <div class="small-6 columns">
+            <div class="medium-6 columns">
                 <button class="small button radius" ng-click="toggle()">Toggle On/Off</button>
                 <b>&nbsp;ng-if</b>
 
@@ -20,7 +20,7 @@
                     This content will enter and leave
                 </div>
             </div>
-            <div class="small-6 columns">
+            <div class="medium-6 columns">
                 <button class="small button radius" ng-click="toggleDanger()">Toggle Danger</button>
                 <b>&nbsp;ng-class</b>
 
@@ -29,14 +29,14 @@
         </div>
 
         <div class="row">
-            <div class="small-6 columns">
+            <div class="medium-6 columns">
                 <button class="small button radius" ng-click="toggleShow()">Toggle Show</button>
                 <b>&nbsp;ng-show</b>
 
                 <div class="panel radius" ng-show="show">This is your final warning</div>
                 <div class="panel radius" ng-hide="show" style="background: salmon;">I'll let you off this time</div>
             </div>
-            <div class="small-6 columns">
+            <div class="medium-6 columns">
                 <button class="small button radius" ng-click="toggleSpecial()">Toggle Show</button>
                 <b>&nbsp;ng-class keyframe animation</b>
 
@@ -45,7 +45,7 @@
         </div>
 
         <div class="row">
-            <div class="small-6 columns">
+            <div class="medium-6 columns">
                 <button class="small button radius" ng-click="toggleCustom()">Toggle Custom</button>
                 <b>&nbsp;ng-class custom js animation</b>
 
@@ -58,7 +58,7 @@
             <div class="small-12 columns">
                 <h3>ng-repeat</h3>
             </div>
-            <div class="small-4 columns">
+            <div class="medium-4 columns">
                 <h4>css-transitions</h4>
                 <input type="text" placeholder="Filter repeat items" ng-model="f"/>
 
@@ -67,7 +67,7 @@
                 </div>
             </div>
 
-            <div class="small-4 columns">
+            <div class="medium-4 columns">
                 <h4>css-animations</h4>
                 <input type="text" placeholder="Filter repeat items" ng-model="f2"/>
 
@@ -76,7 +76,7 @@
                 </div>
             </div>
 
-            <div class="small-4 columns">
+            <div class="medium-4 columns">
                 <h4>js-animations</h4>
                 <input type="text" placeholder="Filter repeat items" ng-model="f3"/>
 
@@ -92,7 +92,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="small-4 columns">
+            <div class="medium-4 columns">
                 <h4>css transitions</h4>
                 <a href="" ng-click="choice='one'" class="tiny button">One</a>
                 <a href="" ng-click="choice='two'" class="tiny button">Two</a>
@@ -102,7 +102,7 @@
                     <div ng-include="choice" class="slide-transition"></div>
                 </div>
             </div>
-            <div class="small-4 columns">
+            <div class="medium-4 columns">
                 <h4>css animations</h4>
                 <a href="" ng-click="choice2='one'" class="tiny button">One</a>
                 <a href="" ng-click="choice2='two'" class="tiny button">Two</a>
@@ -113,7 +113,7 @@
                 </div>
             </div>
 
-            <div class="small-4 columns">
+            <div class="medium-4 columns">
                 <h4>js animations</h4>
                 <a href="" ng-click="choice3='one'" class="tiny button">One</a>
                 <a href="" ng-click="choice3='two'" class="tiny button">Two</a>
@@ -132,7 +132,7 @@
         </div>
 
         <div class="row">
-            <div ng-init="switch='one'" class="small-4 columns">
+            <div ng-init="switch='one'" class="medium-4 columns">
                 <h4>css transitions</h4>
                 <a class="tiny button" href="" ng-click="switch='one'">One</a>
                 <a class="tiny button" href="" ng-click="switch='two'">Two</a>
@@ -144,25 +144,25 @@
                     <div ng-switch-when="three" class="panel switch-transition">Three</div>
                 </div>
             </div>
-            <div ng-init="switch2='one'" class="small-4 columns">
+            <div class="medium-4 columns">
                 <h4>css animations</h4>
-                <a class="tiny button" href="" ng-click="switch2='one'">One</a>
-                <a class="tiny button" href="" ng-click="switch2='two'">Two</a>
-                <a class="tiny button" href="" ng-click="switch2='three'">Three</a>
+                <a class="tiny button" href="" ng-click="switch='one'">One</a>
+                <a class="tiny button" href="" ng-click="switch='two'">Two</a>
+                <a class="tiny button" href="" ng-click="switch='three'">Three</a>
 
-                <div class="switch-container" ng-switch="switch2">
+                <div class="switch-container" ng-switch="switch">
                     <div ng-switch-when="one" class="panel switch-animation">One</div>
                     <div ng-switch-when="two" class="panel switch-animation">Two</div>
                     <div ng-switch-when="three" class="panel switch-animation">Three</div>
                 </div>
             </div>
-            <div ng-init="switch3='one'" class="small-4 columns">
+            <div class="medium-4 columns">
                 <h4>js animations</h4>
-                <a class="tiny button" href="" ng-click="switch3='one'">One</a>
-                <a class="tiny button" href="" ng-click="switch3='two'">Two</a>
-                <a class="tiny button" href="" ng-click="switch3='three'">Three</a>
+                <a class="tiny button" href="" ng-click="switch='one'">One</a>
+                <a class="tiny button" href="" ng-click="switch='two'">Two</a>
+                <a class="tiny button" href="" ng-click="switch='three'">Three</a>
 
-                <div class="switch-container" ng-switch="switch3">
+                <div class="switch-container" ng-switch="switch">
                     <div ng-switch-when="one" class="panel switch-custom">One</div>
                     <div ng-switch-when="two" class="panel switch-custom">Two</div>
                     <div ng-switch-when="three" class="panel switch-custom">Three</div>
