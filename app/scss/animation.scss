@@ -120,8 +120,8 @@
 
 .test-repeater {
   &.ng-enter, &.ng-leave, &.ng-move {
-    -webkit-transition: 5s linear all;
-    transition: 5s linear all;
+    -webkit-transition: .5s linear all;
+    transition: .5s linear all;
     position: relative;
   }
 
@@ -153,3 +153,287 @@
   }
 }
 
+.test-repeater-animation {
+
+  &.ng-enter, &.ng-leave, &.ng-move {
+    position: relative;
+  }
+
+  &.ng-enter {
+    -webkit-animation: 0.5s repeat-animation-enter;
+    animation: 0.5s repeat-animation-enter;
+  }
+
+  &.ng-leave {
+    -webkit-animation: 0.5s repeat-animation-leave;
+    animation: 0.5s repeat-animation-leave;
+  }
+
+  &.ng-move {
+    -webkit-animation: 0.5s repeat-animation-move;
+    animation: 0.5s repeat-animation-move;
+  }
+}
+
+@keyframes repeat-animation-enter {
+  from {
+    left: -10px;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes repeat-animation-enter {
+  from {
+    left: -10px;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes repeat-animation-leave {
+  from {
+    left: 0;
+    opacity: 1;
+  }
+  to {
+    left: -10px;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes repeat-animation-leave {
+  from {
+    left: 0;
+    opacity: 1;
+  }
+  to {
+    left: -10px;
+    opacity: 0;
+  }
+}
+
+@keyframes repeat-animation-move {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes repeat-animation-move {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.custom-container {
+  position: relative;
+}
+
+.slide-transition {
+
+  &.ng-enter, &.ng-leave {
+    -webkit-transition: 0.5s linear all;
+    transition: 0.5s linear all;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+  }
+
+  &.ng-enter {
+    z-index: 100;
+    top: 100px;
+    opacity: 0;
+    &.ng-enter-active {
+      top: 0;
+      opacity: 1;
+    }
+  }
+
+  &.ng-leave {
+    z-index: 101;
+    top: 0;
+    opacity: 1;
+    &.ng-leave-active {
+      top: -100px;
+      opacity: 0;
+    }
+  }
+}
+
+.slide-animation {
+  &.ng-enter, &.ng-leave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+  }
+  &.ng-enter {
+    -webkit-animation: 0.5s slide-animation-enter;
+    animation: 0.5s slide-animation-enter;
+  }
+  &.ng-leave {
+    -webkit-animation: 0.5s slide-animation-leave;
+    animation: 0.5s slide-animation-leave;
+  }
+}
+
+@keyframes slide-animation-enter {
+  from {
+    z-index: 100;
+    top: 100px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide-animation-enter {
+  from {
+    z-index: 100;
+    top: 100px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-animation-leave {
+  from {
+    z-index: 101;
+    top: 0;
+    opacity: 1;
+  }
+  to {
+    top: -100px;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slide-animation-leave {
+  from {
+    z-index: 101;
+    top: 0;
+    opacity: 1;
+  }
+  to {
+    top: -100px;
+    opacity: 0;
+  }
+}
+
+.switch-container {
+  position: relative;
+  height: 100px;
+}
+
+.switch-transition {
+  &.ng-enter, &.ng-leave {
+    -webkit-transition: 0.5s linear all;
+    transition: 0.5s linear all;
+    //  height: 100px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+  }
+
+}
+
+.switch-transition.ng-enter {
+  left: 100%;
+  &.ng-enter-active {
+    left: 0;
+  }
+}
+
+.switch-transition.ng-leave {
+  left: 0;
+  &.ng-leave-active {
+    left: -100%;
+  }
+}
+
+.switch-animation {
+  &.ng-enter, &.ng-leave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  &.ng-enter {
+    -webkit-animation: 0.5s switch-enter;
+    animation: 0.5s switch-enter;
+  }
+
+  &.ng-leave {
+    -webkit-animation: 0.5s switch-leave;
+    animation: 0.5s switch-leave;
+  }
+}
+
+@keyframes switch-enter {
+  from {
+    left: 100%;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes switch-enter {
+  from {
+    left: 100%;
+    opacity: 0;
+  }
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes switch-leave {
+  from {
+    left: 0;
+    opacity: 1;
+  }
+  to {
+    left: -100%;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes switch-leave {
+  from {
+    left: 0;
+    opacity: 1;
+  }
+  to {
+    left: -100%;
+    opacity: 0;
+  }
+}

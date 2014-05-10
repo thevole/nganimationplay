@@ -52,22 +52,139 @@
                 <div class="panel radius" ng-class="{'custom-animation': custom}">I enjoy my morning coffee.</div>
             </div>
 
-            <div class="small-6 columns">
-                <h4>Animating ng-repeat</h4>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="small-12 columns">
+                <h3>ng-repeat</h3>
+            </div>
+            <div class="small-4 columns">
+                <h4>css-transitions</h4>
                 <input type="text" placeholder="Filter repeat items" ng-model="f"/>
+
                 <div class="test-repeater" ng-repeat="item in items | filter: f track by item">
                     {{item}}
                 </div>
             </div>
 
-        </div>
-    </div>
-</div>
+            <div class="small-4 columns">
+                <h4>css-animations</h4>
+                <input type="text" placeholder="Filter repeat items" ng-model="f2"/>
 
-<script src="/jquery/dist/jquery.js"></script>
-<script src="/foundation/js/foundation.min.js"></script>
-<script src="/angular/angular.js"></script>
-<script src="/angular-animate/angular-animate.js"></script>
-<script src="/javascripts/app.js"></script>
+                <div class="test-repeater-animation" ng-repeat="item in items | filter: f2 track by item">
+                    {{item}}
+                </div>
+            </div>
+
+            <div class="small-4 columns">
+                <h4>js-animations</h4>
+                <input type="text" placeholder="Filter repeat items" ng-model="f3"/>
+
+                <div class="test-repeater-custom" ng-repeat="item in items | filter: f3 track by item">
+                    {{item}}
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="small-12 columns">
+                <h3>ng-show animations</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-4 columns">
+                <h4>css transitions</h4>
+                <a href="" ng-click="choice='one'" class="tiny button">One</a>
+                <a href="" ng-click="choice='two'" class="tiny button">Two</a>
+                <a href="" ng-click="choice='three'" class="tiny button">Three</a>
+
+                <div class="custom-container">
+                    <div ng-include="choice" class="slide-transition"></div>
+                </div>
+            </div>
+            <div class="small-4 columns">
+                <h4>css animations</h4>
+                <a href="" ng-click="choice2='one'" class="tiny button">One</a>
+                <a href="" ng-click="choice2='two'" class="tiny button">Two</a>
+                <a href="" ng-click="choice2='three'" class="tiny button">Three</a>
+
+                <div class="custom-container">
+                    <div ng-include="choice2" class="slide-animation"></div>
+                </div>
+            </div>
+
+            <div class="small-4 columns">
+                <h4>js animations</h4>
+                <a href="" ng-click="choice3='one'" class="tiny button">One</a>
+                <a href="" ng-click="choice3='two'" class="tiny button">Two</a>
+                <a href="" ng-click="choice3='three'" class="tiny button">Three</a>
+
+                <div class="custom-container">
+                    <div ng-include="choice3" class="slide-custom"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="small-12 columns">
+                <h3>ng-switch animations</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div ng-init="switch='one'" class="small-4 columns">
+                <h4>css transitions</h4>
+                <a class="tiny button" href="" ng-click="switch='one'">One</a>
+                <a class="tiny button" href="" ng-click="switch='two'">Two</a>
+                <a class="tiny button" href="" ng-click="switch='three'">Three</a>
+
+                <div class="switch-container" ng-switch="switch">
+                    <div ng-switch-when="one" class="panel switch-transition">One</div>
+                    <div ng-switch-when="two" class="panel switch-transition">Two</div>
+                    <div ng-switch-when="three" class="panel switch-transition">Three</div>
+                </div>
+            </div>
+            <div ng-init="switch2='one'" class="small-4 columns">
+                <h4>css animations</h4>
+                <a class="tiny button" href="" ng-click="switch2='one'">One</a>
+                <a class="tiny button" href="" ng-click="switch2='two'">Two</a>
+                <a class="tiny button" href="" ng-click="switch2='three'">Three</a>
+
+                <div class="switch-container" ng-switch="switch2">
+                    <div ng-switch-when="one" class="panel switch-animation">One</div>
+                    <div ng-switch-when="two" class="panel switch-animation">Two</div>
+                    <div ng-switch-when="three" class="panel switch-animation">Three</div>
+                </div>
+            </div>
+            <div ng-init="switch3='one'" class="small-4 columns">
+                <h4>js animations</h4>
+                <a class="tiny button" href="" ng-click="switch3='one'">One</a>
+                <a class="tiny button" href="" ng-click="switch3='two'">Two</a>
+                <a class="tiny button" href="" ng-click="switch3='three'">Three</a>
+
+                <div class="switch-container" ng-switch="switch3">
+                    <div ng-switch-when="one" class="panel switch-custom">One</div>
+                    <div ng-switch-when="two" class="panel switch-custom">Two</div>
+                    <div ng-switch-when="three" class="panel switch-custom">Three</div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/ng-template" id="one">
+            <div class="panel">one</div>
+        </script>
+        <script type="text/ng-template" id="two">
+            <div class="panel">two</div>
+        </script>
+        <script type="text/ng-template" id="three">
+            <div class="panel">three</div>
+        </script>
+
+
+        <script src="/jquery/dist/jquery.js"></script>
+        <script src="/foundation/js/foundation.min.js"></script>
+        <script src="/angular/angular.js"></script>
+        <script src="/angular-animate/angular-animate.js"></script>
+        <script src="/javascripts/app.js"></script>
 </body>
 </html>

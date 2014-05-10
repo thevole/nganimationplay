@@ -53,6 +53,113 @@ angular.module('app')
     };
   });
 angular.module('app')
+  .animation('.test-repeater-custom', function () {
+    return {
+      enter: function (element, done) {
+        jQuery(element).css({
+          position: 'relative',
+          left: -10,
+          opacity: 0
+        });
+
+        jQuery(element).animate({
+          left: 0,
+          opacity: 1
+        }, done);
+      },
+
+      leave: function (element, done) {
+        jQuery(element).css({
+          position: 'relative',
+          left: 0,
+          opacity: 1
+        });
+
+        jQuery(element).animate({
+          left: -10,
+          opacity: 0
+        }, done);
+      },
+
+      move: function (element, done) {
+        jQuery(element).css({
+          opacity: 0.5
+        });
+        jQuery(element).animate({
+          opacity: 1
+        }, done);
+
+      }
+    }
+  });
+angular.module('app')
+  .animation('.slide-custom', function () {
+    return {
+      enter: function (element, done) {
+        jQuery(element).css({
+          position: 'absolute',
+          'z-index': 100,
+          top: 100,
+          left: 0,
+          right: 0,
+          opacity: 0
+        });
+
+        jQuery(element).animate({
+          top: 0,
+          opacity: 1
+        }, done);
+      },
+
+      leave: function (element, done) {
+        jQuery(element).css({
+          position: 'absolute',
+          'z-index': 101,
+          top: 0,
+          opacity: 1
+        });
+        jQuery(element).animate({
+          top: -100,
+          opacity: 0
+        }, done)
+      }
+
+    }
+  });
+angular.module('app')
+  .animation('.switch-custom', function () {
+    return {
+      enter: function (element, done) {
+        jQuery(element).css({
+          position: 'absolute',
+          top: 0,
+          left: element.parent().width(),
+          right: 0,
+          opacity: 0
+        });
+
+        jQuery(element).animate({
+          left: 0,
+          opacity: 1
+        }, done);
+      },
+      
+      leave: function (element, done) {
+        jQuery(element).css({
+          position: 'absolute',
+          left: 0,
+          opacity: 1
+        });
+
+        jQuery(element).animate({
+          left: element.parent().width() * -1,
+          opacity: 0
+        }, done);
+      }
+    }
+  });
+
+angular.module('app')
   .controller('mainCtrl', ['$scope', function ($scope) {
     $scope.on = true;
 
